@@ -26,8 +26,6 @@ services:
     # Из какого Dockerfile собирать образ для этого контейнера:
     build: ./backend/
     env_file: .env
-    # Какие контейнеры нужно запустить до старта этого контейнера:
-    # Тут подключаем volume к backend
     volumes:
       - static:/backend_static
     depends_on:
